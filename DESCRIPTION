@@ -1,0 +1,33 @@
+Package: elf
+Title: Assorted R helpers
+Version: 0.0.0.9000
+Authors@R: 
+    c(
+      person(
+        given = "Maximilian",
+        family = "Held",
+        role = c("aut", "cre"),
+        email = "info@maxheld.de",
+        comment = c(ORCID = "0000-0002-4703-5388")
+      ),
+      person(
+        given = "Max Held Data Science",
+        role = c("cph", "fnd")
+      )
+    )
+Description: 
+    Assorted R helpers.
+URL: https://github.com/dataheld/elf
+BugReports: https://github.com/dataheld/elf/issues
+License: file LICENSE
+Encoding: UTF-8
+LazyData: true
+Language: en
+Roxygen: list(markdown = TRUE)
+Imports:
+Suggests: 
+    shinytest2,
+    testthat (>= 3.0.0)
+Config/testthat/edition: 3
+Config/testthat/parallel: true
+Config/Needs/website: rmarkdown
