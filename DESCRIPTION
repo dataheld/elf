@@ -25,6 +25,7 @@ LazyData: true
 Language: en
 Roxygen: list(markdown = TRUE)
 Imports:
+    pkgload
 Suggests: 
     shinytest2,
     testthat (>= 3.0.0)
