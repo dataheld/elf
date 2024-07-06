@@ -3,3 +3,4 @@
 export(path_ex_file)
 export(path_extdata)
 export(system_file2)
+export(transform_with_generated)

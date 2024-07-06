@@ -1,6 +1,6 @@
 #' @inherit base::system.file
 #' @inheritDotParams base::system.file
-#' @keywords paths
+#' @keywords path helpers
 #' @export
 system_file2 <- function(..., package = pkgload::pkg_name()) {
   system.file(..., package = package)
@@ -8,7 +8,7 @@ system_file2 <- function(..., package = pkgload::pkg_name()) {
 
 #' Create path to external data
 #' @inheritParams system_file2
-#' @keywords paths
+#' @keywords path helpers
 #' @export
 path_extdata <- function(...) {
   args <- c("extdata", list(...))

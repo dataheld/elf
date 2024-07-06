@@ -9,6 +9,7 @@
 #' If it uses objects from other files,
 #' manual collation instructions via `#' @include foo.R` may be neeeded,
 #' but that will quickly make the package unwieldy.
+#' @keywords path helpers, example helpers
 #' @noRd
 source_pef <- function(...) {
   source(path_ex_file(...), local = TRUE)$value
@@ -17,7 +18,7 @@ source_pef <- function(...) {
 #' Create path to example files
 #' Used in example tag and tests
 #' @inheritParams system_file2
-#' @keywords paths examples
+#' @keywords path helpers, example helpers
 #' @export
 path_ex_file <- function(...) {
   args <- c("examples", list(...))
