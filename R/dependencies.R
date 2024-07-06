@@ -6,9 +6,6 @@
 #'
 #' @inherit rlang::check_installed
 #' @inheritDotParams rlang::check_installed
-#' @example
-#' # will ask user to install during interactive use
-#' rlang::with_interactive(expr = is_installed2("idonotexist"), value = FALSE)
 #' @keywords dependencies helper
 #' @export
 is_installed2 <- function(...) {
@@ -64,8 +61,8 @@ cnd_header.elf_message_package_not_found <- function(cnd) {
   pkg_enum <- chr_quoted(cnd$pkg, type = "\"")
 
   if (!rlang::is_null(version)) {
-    pkg_enum <- list_c(pmap(list(pkg_enum, compare, version), function(p, o, v) {
-      if (is_na(v)) {
+    pkg_enum <- purrr::list_c(purrr::pmap(list(pkg_enum, compare, version), function(p, o, v) {
+      if (rlang::is_na(v)) {
         p
       } else {
         sprintf("%s (%s %s)", p, o, v)
