@@ -28,8 +28,7 @@ Imports:
     cli,
     pkgload,
     purrr,
-    rlang,
-    usethis
+    rlang
 Suggests: 
     rstudioapi,
     shinytest2,

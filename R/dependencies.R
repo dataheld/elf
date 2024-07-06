@@ -1,3 +1,4 @@
+# TODO replace this with upstream https://github.com/dataheld/elf/issues/1
 #' Checks if a package is installed and *informs* the user if not
 #'
 #' This is wrapper around [rlang::check_installed];
