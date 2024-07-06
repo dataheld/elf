@@ -3,5 +3,5 @@
 export(is_installed2)
 export(path_ex_file)
 export(path_extdata)
-export(system_file2)
+export(path_package_this)
 export(transform_with_generated)

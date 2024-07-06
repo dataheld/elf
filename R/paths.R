@@ -1,16 +1,16 @@
-#' @inherit base::system.file
-#' @inheritDotParams base::system.file
+#' Path to *this* package
+#' @inherit fs::path_package
 #' @keywords path helpers
 #' @export
-system_file2 <- function(..., package = pkgload::pkg_name()) {
+path_package_this <- function(package = pkgload::pkg_name(), ...) {
   system.file(..., package = package)
 }
 
 #' Create path to external data
-#' @inheritParams system_file2
+#' @inherit path_package_this
 #' @keywords path helpers
 #' @export
 path_extdata <- function(...) {
   args <- c("extdata", list(...))
-  rlang::exec(system_file2, !!!args, mustWork = TRUE) # nolint
+  rlang::exec(path_package_this, !!!args, mustWork = TRUE) # nolint
 }
