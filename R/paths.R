@@ -1,5 +1,6 @@
 #' Path to *this* package
-#' @inherit fs::path_package
+#' @inheritParams fs::path_package
+#' @inheritDotParams fs::path_package
 #' @keywords path helpers
 #' @export
 path_package_this <- function(package = pkgload::pkg_name(), ...) {
