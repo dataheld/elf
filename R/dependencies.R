@@ -5,7 +5,7 @@
 #' instead of erroring out if the check fails it returns `FALSE`.
 #' However, unlike [rlang::is_installed], it emits a message to the user.
 #'
-#' @inherit rlang::check_installed
+#' @inheritParams rlang::check_installed
 #' @inheritDotParams rlang::check_installed
 #' @keywords dependencies helper
 #' @export
