@@ -17,10 +17,10 @@ source_pef <- function(...) {
 
 #' Create path to example files
 #' Used in example tag and tests
-#' @inheritParams system_file2
+#' @inheritParams path_package_this
 #' @keywords path helpers, example helpers
 #' @export
 path_ex_file <- function(...) {
   args <- c("examples", list(...))
-  rlang::exec(system_file2, !!!args, mustWork = TRUE) # nolint
+  rlang::exec(path_package_this, !!!args, mustWork = TRUE) # nolint
 }
