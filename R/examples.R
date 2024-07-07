@@ -14,7 +14,7 @@
 #' but that will quickly make the package unwieldy.
 #' @inheritParams fs::path_package
 #' @keywords path helpers, example helpers
-#' @noRd
+#' @export
 source_pef <- function(package, ...) {
   path <- fs::path_package(package = package, "examples", ..., ext = "R")
   source(path, local = TRUE)$value
