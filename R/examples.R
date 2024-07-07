@@ -31,8 +31,8 @@ source_pef <- function(...) {
 use_ex_file <- function(..., open = rlang::is_interactive()) {
   # TODO https://github.com/dataheld/elf/issues/2
   # take currently open file name from usethis
-  usethis::use_directory(example_path)
   path <- fs::path(example_path, ..., ext = "R")
+  usethis::use_directory(fs::path_dir(path))
   usethis::use_template(
     "example.R",
     save_as = path,
@@ -48,7 +48,4 @@ example_path <- fs::path("inst", "examples")
 #' @inheritParams path_package_this
 #' @keywords path helpers, example helpers
 #' @export
-path_ex_file <- function(...) {
-  args <- c("examples", list(...))
-  rlang::exec(path_package_this, !!!args, mustWork = TRUE) # nolint
-}
+path_ex_file <- function(...) path_package_this("examples", ..., ext = "R")

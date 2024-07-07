@@ -7,6 +7,8 @@
 #'
 #' @inheritParams rlang::check_installed
 #' @inheritDotParams rlang::check_installed
+#' @example inst/examples/dependencies/is_installed2/missing.R
+#' @example inst/examples/dependencies/is_installed2/present.R
 #' @keywords dependencies helper
 #' @export
 is_installed2 <- function(...) {

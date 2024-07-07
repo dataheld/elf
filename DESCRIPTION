@@ -27,7 +27,6 @@ Roxygen: list(markdown = TRUE)
 Imports:
     cli,
     fs,
-    pkgload,
     purrr,
     rlang,
     usethis
