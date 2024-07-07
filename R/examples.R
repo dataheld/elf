@@ -1,5 +1,8 @@
 #' Source path_ex_files
 #'
+#' To use this in your package, re-declare `source_pef()` in your package
+#' with *your* package name.
+#'
 #' @section Warning:
 #' Can only be called if all objects used in sourced files are already loaded.
 #' This is not a collation issue, but similar.
@@ -9,11 +12,15 @@
 #' If it uses objects from other files,
 #' manual collation instructions via `#' @include foo.R` may be neeeded,
 #' but that will quickly make the package unwieldy.
+#' @inheritParams fs::path_package
 #' @keywords path helpers, example helpers
 #' @noRd
-source_pef <- function(...) {
-  source(path_ex_file(...), local = TRUE)$value
+source_pef <- function(package, ...) {
+  path <- fs::path_package(package = package, "examples", ..., ext = "R")
+  source(path, local = TRUE)$value
 }
+
+source_pef_elf <- purrr::partial(source_pef, package = "elf")
 
 #' Create or edit example files
 #'
@@ -42,10 +49,3 @@ use_ex_file <- function(..., open = rlang::is_interactive()) {
 }
 
 example_path <- fs::path("inst", "examples")
-
-#' Create path to example files
-#' Used in example tag and tests
-#' @inheritParams path_package_this
-#' @keywords path helpers, example helpers
-#' @export
-path_ex_file <- function(...) path_package_this("examples", ..., ext = "R")
