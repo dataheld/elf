@@ -64,4 +64,60 @@ skip_if_pkg_not_installed2 <- make_skip_if_not_function(check_pkg_installed)
 #' used the `load_all()`d version of an in-development package,
 #' but may instead use whichever version was last installed.
 #' This can lead to inconsistent results and painful confusion.
-#' @noRd
+#' @keywords dependencies helper
+#' @name pkg_installed_but_not_via_loadall
+NULL
+
+#' @describeIn pkg_installed_but_not_via_loadall
+#' returns `TRUE` or the error message as a string.
+#' @inheritParams pkg_installed
+#' @export
+check_pkg_installed_but_not_via_loadall <- function(x = character(1L)) {
+  res <- check_pkg_installed(x)
+  if (!isTRUE(res)) {
+    return(res)
+  }
+  if (pkgload::is_dev_package(x)) {
+    paste(
+      "The version of package",
+      x,
+      "was loaded from `pkgload::load_all()`.",
+      "It is not the installed version."
+    )
+  } else {
+    TRUE
+  }
+}
+
+#' @describeIn pkg_installed_but_not_via_loadall
+#' returns `x` invisibly or errors out.
+#' @inheritParams checkmate::makeAssertion
+#' @inheritParams checkmate::assert
+#' @export
+assert_pkg_installed_but_not_via_loadall <- checkmate::makeAssertionFunction(
+  check_pkg_installed_but_not_via_loadall
+)
+
+#' @describeIn pkg_installed_but_not_via_loadall
+#' returns `TRUE` or `FALSE`
+#' @inheritParams checkmate::makeTest
+#' @export
+test_pkg_installed_but_not_via_loadall <- checkmate::makeTestFunction(
+  check_pkg_installed_but_not_via_loadall
+)
+
+#' @describeIn pkg_installed_but_not_via_loadall
+#' returns an [testthat::expectation()]
+#' @inheritParams checkmate::makeExpectation
+#' @export
+expect_pkg_installed_but_not_via_loadall <- checkmate::makeExpectationFunction(
+  check_pkg_installed_but_not_via_loadall
+)
+
+#' @describeIn pkg_installed_but_not_via_loadall
+#' skips test if package is *not* installed.
+#' @include tests.R
+#' @export
+skip_if_pkg_not_installed_not_loadall <- make_skip_if_not_function(
+  check_pkg_installed_but_not_via_loadall
+)

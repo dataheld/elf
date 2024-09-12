@@ -29,6 +29,7 @@ Imports:
     cli,
     fs,
     options,
+    pkgload,
     purrr,
     rlang,
     usethis,
