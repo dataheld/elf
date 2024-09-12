@@ -23,7 +23,6 @@ transform_with_generated <- function(x = character()) {
 #' [checkmate](https://mllg.github.io/checkmate/index.html)'s
 #' `check_*()`-type functions into [testthat](https://testthat.r-lib.org)'s
 #' `skip_if_not_*()` functions.
-#'
 #' @inheritParams checkmate::makeAssertionFunction
 #' @details
 #' Notice that `check_*()` are always formulated *positively*;
