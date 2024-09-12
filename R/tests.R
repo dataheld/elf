@@ -2,7 +2,7 @@
 #'
 #' To be used as an argument for [testthat::expect_snapshot()].
 #' @param x A character vector.
-#' @keywords snapshot helpers, testing helpers
+#' @family testing helpers
 #' @name transform_snap
 NULL
 
@@ -45,7 +45,7 @@ transform_with_generated <- function(x = character()) {
 #' }
 #' ```
 #' @export
-#' @keywords testing helpers
+#' @family testing helpers
 make_skip_if_not_function <- function(check.fun) {
   force(check.fun)
   function(...) {

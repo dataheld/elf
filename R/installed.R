@@ -3,7 +3,7 @@
 #' Check if a package is installed
 #'
 #' Wrapper around [rlang::is_installed()].
-#' @keywords dependencies helper
+#' @family dependencies helper
 #' @name pkg_installed
 NULL
 
@@ -64,7 +64,7 @@ skip_if_pkg_not_installed2 <- make_skip_if_not_function(check_pkg_installed)
 #' used the `load_all()`d version of an in-development package,
 #' but may instead use whichever version was last installed.
 #' This can lead to inconsistent results and painful confusion.
-#' @keywords dependencies helper
+#' @family dependencies helper
 #' @name pkg_installed_but_not_via_loadall
 NULL
 

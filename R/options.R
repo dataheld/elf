@@ -6,7 +6,7 @@
 #' @param x An option name.
 #' @inheritParams options::opt_set
 #' @inheritParams withr::defer
-#' @keywords options helper
+#' @family options helpers
 #' @export
 opt_set_local2 <- function(x,
                            value,
