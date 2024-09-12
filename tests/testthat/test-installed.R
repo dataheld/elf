@@ -7,7 +7,7 @@ describe("check_pkg_installed", {
     "returns message for non-installed packages",
     expect_equal(
       check_pkg_installed("doNOTexist"),
-      "Package doNOTexist is not installed."
+      "Package doNOTexist is not installed"
     )
 
   )

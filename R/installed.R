@@ -18,7 +18,7 @@ check_pkg_installed <- function(x = character(1L)) {
   if (rlang::is_installed(x)) {
     return(TRUE)
   } else {
-    paste("Package", x, "is not installed.")
+    glue::glue("Package {x} is not installed")
   }
 }
 
@@ -78,10 +78,8 @@ check_pkg_installed_but_not_via_loadall <- function(x = character(1L)) {
     return(res)
   }
   if (pkgload::is_dev_package(x)) {
-    paste(
-      "The version of package",
-      x,
-      "was loaded from `pkgload::load_all()`.",
+    glue::glue(
+      "The version of package {x} was loaded from `pkgload::load_all()`.",
       "It is not the installed version."
     )
   } else {
