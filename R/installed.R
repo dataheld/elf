@@ -116,6 +116,6 @@ expect_pkg_installed_but_not_via_loadall <- checkmate::makeExpectationFunction(
 #' skips test if package is *not* installed.
 #' @include tests.R
 #' @export
-skip_if_pkg_not_installed_not_loadall <- make_skip_if_not_function(
+skip_if_pkg_installed_but_not_via_loadall <- make_skip_if_not_function(
   check_pkg_installed_but_not_via_loadall
 )
