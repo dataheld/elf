@@ -13,7 +13,8 @@
 #' manual collation instructions via `#' @include foo.R` may be neeeded,
 #' but that will quickly make the package unwieldy.
 #' @inheritParams fs::path_package
-#' @keywords path helpers, example helpers
+#' @family path helpers
+#' @family example helpers
 #' @export
 source_pef <- function(package, ...) {
   path <- fs::path_package(package = package, "examples", ..., ext = "R")
@@ -34,7 +35,7 @@ source_pef_elf <- purrr::partial(source_pef, package = "elf")
 #' @inheritParams fs::path
 #' @inheritParams usethis::use_template
 #' @export
-#' @keywords example helpers
+#' @family example helpers
 use_ex_file <- function(..., open = rlang::is_interactive()) {
   # TODO https://github.com/dataheld/elf/issues/2
   # take currently open file name from usethis

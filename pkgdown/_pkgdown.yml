@@ -1,7 +1,21 @@
 ---
+url: https://elf.maxheld.de
 authors:
   Maximilian Held:
     href: http://www.maxheld.de
 template:
   bootstrap: 5
   bootswatch: cosmo
+reference:
+  - title: Dependencies
+  - contents:
+      - has_concept("dependencies helper")
+  - title: Examples
+  - contents:
+      - has_concept("example helpers")
+  - title: Options
+  - contents:
+      - has_concept("options helpers")
+  - title: Tests
+  - contents:
+      - has_concept("test helpers")

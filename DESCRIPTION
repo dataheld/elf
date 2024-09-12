@@ -1,7 +1,7 @@
 Package: elf
 Title: Assorted R helpers
 Version: 0.0.0.9000
-Authors@R: 
+Authors@R:
     c(
       person(
         given = "Maximilian",
@@ -15,9 +15,9 @@ Authors@R:
         role = c("cph", "fnd")
       )
     )
-Description: 
+Description:
     Assorted R helpers.
-URL: https://github.com/dataheld/elf
+URL: https://github.com/dataheld/elf, https://elf.maxheld.de
 BugReports: https://github.com/dataheld/elf/issues
 License: file LICENSE
 Encoding: UTF-8
@@ -32,10 +32,11 @@ Imports:
     rlang,
     usethis,
     withr
-Suggests: 
+Suggests:
     rstudioapi,
     shinytest2,
     testthat (>= 3.0.0)
 Config/testthat/edition: 3
 Config/testthat/parallel: true
 Config/Needs/website: rmarkdown
+RoxygenNote: 7.3.2

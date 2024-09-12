@@ -2,7 +2,7 @@
 #'
 #' To be used as an argument for [testthat::expect_snapshot()].
 #' @param x A character vector.
-#' @keywords snapshot helpers
+#' @family test helpers
 #' @name transform_snap
 NULL
 
