@@ -141,6 +141,6 @@ jobs:
         with:
           apiToken: ${{ secrets.CLOUDFLARE_API_TOKEN_PAGES }}
           accountId: ${{ vars.CLOUDFLARE_ACCOUNT_ID_HELDEN18DE }}
-          projectName: esoutput2
+          projectName: elf
           directory: docs/
           gitHubToken: ${{ secrets.GITHUB_TOKEN }}
