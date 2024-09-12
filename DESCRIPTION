@@ -25,9 +25,12 @@ LazyData: true
 Language: en
 Roxygen: list(markdown = TRUE)
 Imports:
+    checkmate,
     cli,
     fs,
+    glue,
     options,
+    pkgload,
     purrr,
     rlang,
     usethis,
@@ -39,4 +42,11 @@ Suggests:
 Config/testthat/edition: 3
 Config/testthat/parallel: true
 Config/Needs/website: rmarkdown
+Collate:
+    'dependencies.R'
+    'elf-package.R'
+    'examples.R'
+    'tests.R'
+    'installed.R'
+    'options.R'
 RoxygenNote: 7.3.2

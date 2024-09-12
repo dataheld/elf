@@ -18,4 +18,4 @@ reference:
       - has_concept("options helpers")
   - title: Tests
   - contents:
-      - has_concept("test helpers")
+      - has_concept("testing helpers")
