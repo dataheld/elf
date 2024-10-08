@@ -1,3 +1,5 @@
+# example path helper ====
+
 #' Source path_ex_files
 #'
 #' To use this in your package, re-declare `source_pef()` in your package
@@ -50,3 +52,60 @@ use_ex_file <- function(..., open = rlang::is_interactive()) {
 }
 
 example_path <- fs::path("inst", "examples")
+
+# elfReusableExamples tag ====
+
+#' Tag for reusable example code
+#'
+#' Provides new roxygen2 tag to make the `@examples` code reusable.
+#'
+#' @details
+#' Using this tag, you can reuse the expression in `@examples`.
+#' For example,
+#' your `@examples` may be an invocation of the documented function.
+#' You may often use the same invocation to write unit tests for the function.
+#' This tag lets you reuse the example code.
+#'
+#' Alternatively, you can store this code in a separate file,
+#' include it in the documentation via `@example`,
+#' and call it in tests and elsewhere via [source_pef()].
+#'
+#' @family example helpers
+#' @family testing helpers
+#'
+#' @name elfReusableExamples
+NULL
+
+#' @rdname elfReusableExamples
+#' @details
+#' `@elfReusableExamples ${1:name} {2:# example code}`
+#' Example code to be reused.
+#'
+#' Wraps @examples.
+#' @usage
+#' #' @elfResuableExamples ${1:name} {2:# example code}
+#' @name tag_reusable_examples
+NULL
+
+#' @exportS3Method roxygen2::roxy_tag_parse
+roxy_tag_parse.roxy_tag_elfReusableExamples <- function(x) {
+  check_pkg_installed("roxygen2")
+  check_pkg_installed("stringr")
+  parsed <- stringr::str_split(
+    x$raw,
+    pattern = stringr::boundary("word"),
+    n = 2,
+    simplify = TRUE
+  )
+  x$val <- list(
+    name = parsed[1, 1],
+    code = parsed[1, 2]
+  )
+  x
+}
+
+#' @exportS3Method roxygen2::roxy_tag_rd
+roxy_tag_rd.roxy_tag_elfReusableExamples <- function(x, base_path, env) {
+  res <- x[["val"]][["code"]]
+  roxygen2::rd_section("examples", res)
+}
