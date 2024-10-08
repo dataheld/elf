@@ -106,6 +106,10 @@ roxy_tag_parse.roxy_tag_elfReusableExamples <- function(x) {
 
 #' @exportS3Method roxygen2::roxy_tag_rd
 roxy_tag_rd.roxy_tag_elfReusableExamples <- function(x, base_path, env) {
-  res <- x[["val"]][["code"]]
+  res <- paste(
+    paste("#", x[["val"]][["name"]]),
+    x[["val"]][["code"]],
+    sep = "\n"
+  )
   roxygen2::rd_section("examples", res)
 }

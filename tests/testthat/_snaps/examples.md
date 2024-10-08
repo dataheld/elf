@@ -40,7 +40,9 @@
       topic$get_section("examples")
     Output
       \examples{
+      # foo
       zap_fun(1, 2)
+      # bar
       zap_fun(2, 3)
       } 
 
