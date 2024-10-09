@@ -172,3 +172,19 @@ roclet_output.roclet_elfReusableExamples <- function(x,
 #' paste2("ipsum", "dolor")
 #' @noRd
 paste2 <- function(...) paste(...)
+
+#' Extract example calls
+#'
+#' Including metadata
+#'
+#' @family example helpers
+#' @family testing helpers
+#' @name extract_examples
+NULL
+
+#' @describeIn extract_examples All possible
+#' @inheritParams roxygen2::roclet_process
+#' @export
+extract_all_examples <- function(blocks = roxygen2::parse_package()) {
+  roxygen2::roclet_process(reusableExamples_roclet(), blocks = blocks)
+}

@@ -33,4 +33,14 @@ describe("roclet", {
       roxygen2::roclet_output(reusableExamples_roclet(), results)
     )
   )
+  skip_if(
+    is_checking(),
+    "Can only run test on source, not installed package."
+  )
+  it(
+    "can extract examples from full package",
+    expect_snapshot(
+      extract_all_examples(blocks = roxygen2::parse_package("../.."))
+    )
+  )
 })

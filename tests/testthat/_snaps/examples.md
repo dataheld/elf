@@ -72,3 +72,15 @@
       2 zap_fun zap_fun <text> bar   "zap_fun(2, 3)"                                  
       3 qux_fun qux_fun <text> baz   "qux_fun(3, 4)\nonly the result of this should b~
 
+# roclet: can extract examples from full package
+
+    Code
+      extract_all_examples(blocks = roxygen2::parse_package("../.."))
+    Message
+      i Loading elf
+    Output
+      # A tibble: 1 x 5
+        topic  alias  file                                        name  code          
+        <chr>  <chr>  <chr>                                       <chr> <chr>         
+      1 paste2 paste2 /Users/max/GitHub/dataheld/elf/R/examples.R lorem "paste2(\"ips~
+
