@@ -124,7 +124,10 @@ reusableExamples_roclet <- function() {
 }
 
 #' @exportS3Method roxygen2::roclet_process
-roclet_process.roclet_elfReusableExamples <- function(x, blocks, env, base_path) {
+roclet_process.roclet_elfReusableExamples <- function(x,
+                                                      blocks,
+                                                      env,
+                                                      base_path) {
   empty_res <- tibble::tibble(
     topic = character(),
     alias = character(),
