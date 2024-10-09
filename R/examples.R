@@ -161,6 +161,8 @@ roclet_output.roclet_elfReusableExamples <- function(x, results, base_path, ...)
 }
 
 #' An example documentation of a resuable example
+#' @inheritDotParams paste
 #' @elfReusableExamples lorem
-#' paste2("ipsum, "dolor")
-paste2 <- paste
+#' paste2("ipsum", "dolor")
+#' @noRd
+paste2 <- function(...) paste(...)
