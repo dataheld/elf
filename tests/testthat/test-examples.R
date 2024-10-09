@@ -40,7 +40,8 @@ describe("roclet", {
   it(
     "can extract examples from full package",
     expect_snapshot(
-      extract_all_examples(blocks = roxygen2::parse_package("../.."))
+      # drop file path, because it keeps changing
+      extract_all_examples(blocks = roxygen2::parse_package("../.."))[-3]
     )
   )
 })
