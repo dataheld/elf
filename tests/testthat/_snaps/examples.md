@@ -75,12 +75,12 @@
 # roclet: can extract examples from full package
 
     Code
-      extract_all_examples(blocks = roxygen2::parse_package("../.."))
+      extract_all_examples(blocks = roxygen2::parse_package("../.."))[-3]
     Message
       i Loading elf
     Output
-      # A tibble: 1 x 5
-        topic  alias  file                                        name  code          
-        <chr>  <chr>  <chr>                                       <chr> <chr>         
-      1 paste2 paste2 /Users/max/GitHub/dataheld/elf/R/examples.R lorem "paste2(\"ips~
+      # A tibble: 1 x 4
+        topic  alias  name  code                          
+        <chr>  <chr>  <chr> <chr>                         
+      1 paste2 paste2 lorem "paste2(\"ipsum\", \"dolor\")"
 
