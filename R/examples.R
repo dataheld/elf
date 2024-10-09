@@ -154,7 +154,10 @@ roclet_process.roclet_elfReusableExamples <- function(x, blocks, env, base_path)
 }
 
 #' @exportS3Method roxygen2::roclet_output
-roclet_output.roclet_elfReusableExamples <- function(x, results, base_path, ...) {
+roclet_output.roclet_elfReusableExamples <- function(x,
+                                                     results,
+                                                     base_path,
+                                                     ...) {
   message("Found these (reusable) examples:")
   print(results)
   invisible(NULL)
