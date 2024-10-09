@@ -113,3 +113,54 @@ roxy_tag_rd.roxy_tag_elfReusableExamples <- function(x, base_path, env) {
   )
   roxygen2::rd_section("examples", res)
 }
+
+#' Roclet to retrieve code from `@elfReusableExamples`
+#' @family example helpers
+#' @family testing helpers
+#' @keywords internal
+#' @export
+reusableExamples_roclet <- function() {
+  roxygen2::roclet("elfReusableExamples")
+}
+
+#' @exportS3Method roxygen2::roclet_process
+roclet_process.roclet_elfReusableExamples <- function(x, blocks, env, base_path) {
+  empty_res <- tibble::tibble(
+    topic = character(),
+    alias = character(),
+    file = character(),
+    name = character(),
+    code = character()
+  )
+  purrr::map(
+    blocks,
+    .f = function(block) {
+      tags <- roxygen2::block_get_tags(block, "elfReusableExamples")
+      full_res <- empty_res
+      for (tag in tags) {
+        res <- tibble::tibble(
+          topic = purrr::pluck(block, "object", "topic"),
+          alias = purrr::pluck(block, "object", "alias"),
+          file = tag$file,
+          name = tag$val$name,
+          code = tag$val$code
+        )
+        full_res <- tibble::add_row(full_res, res)
+      }
+      full_res
+    }
+  )  |>
+    purrr::list_rbind()
+}
+
+#' @exportS3Method roxygen2::roclet_output
+roclet_output.roclet_elfReusableExamples <- function(x, results, base_path, ...) {
+  message("Found these (reusable) examples:")
+  print(results)
+  invisible(NULL)
+}
+
+#' An example documentation of a resuable example
+#' @elfReusableExamples lorem
+#' paste2("ipsum, "dolor")
+paste2 <- paste

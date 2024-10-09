@@ -33,6 +33,7 @@ Imports:
     pkgload,
     purrr,
     rlang,
+    tibble,
     usethis,
     withr
 Suggests:

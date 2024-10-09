@@ -16,7 +16,7 @@
       [<text>:  6] @usage '<generated>' {parsed}
       
       [[5]]
-      [<text>:  6] @.formals '<generated>' {parsed}
+      [<text>:  6] @.formals '<generated>' {unparsed}
       
       [[6]]
       [<text>:  6] @backref '<generated>' {parsed}
@@ -45,4 +45,30 @@
       # bar
       zap_fun(2, 3)
       } 
+
+# roclet: can retrieve code and metadata
+
+    Code
+      results
+    Output
+      # A tibble: 3 x 5
+        topic   alias   file   name  code                                             
+        <chr>   <chr>   <chr>  <chr> <chr>                                            
+      1 zap_fun zap_fun <text> foo   "zap_fun(1, 2)"                                  
+      2 zap_fun zap_fun <text> bar   "zap_fun(2, 3)"                                  
+      3 qux_fun qux_fun <text> baz   "qux_fun(3, 4)\nonly the result of this should b~
+
+# roclet: can inform about found resuable calls
+
+    Code
+      roxygen2::roclet_output(reusableExamples_roclet(), results)
+    Message
+      Found these (reusable) examples:
+    Output
+      # A tibble: 3 x 5
+        topic   alias   file   name  code                                             
+        <chr>   <chr>   <chr>  <chr> <chr>                                            
+      1 zap_fun zap_fun <text> foo   "zap_fun(1, 2)"                                  
+      2 zap_fun zap_fun <text> bar   "zap_fun(2, 3)"                                  
+      3 qux_fun qux_fun <text> baz   "qux_fun(3, 4)\nonly the result of this should b~
 
