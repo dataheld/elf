@@ -9,6 +9,5 @@ describe("check_pkg_installed", {
       check_pkg_installed("doNOTexist"),
       "Package doNOTexist is not installed"
     )
-
   )
 })

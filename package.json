@@ -1,0 +1,7 @@
+{
+  "name": "elf-quality-tools",
+  "private": true,
+  "devDependencies": {
+    "jscpd": "4.0.8"
+  }
+}

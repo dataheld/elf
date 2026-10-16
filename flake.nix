@@ -15,6 +15,10 @@
     inputs.nullkomma.lib.mkFlake { inherit inputs; } {
       imports = [ inputs.brand.flakeModules.privacy ];
       nullkomma.github.enable = false;
+      nullkomma.gitignore = [
+        "/node_modules/"
+        "/report/"
+      ];
       nullkomma.r = {
         enable = true;
         pkgdown.enable = true;
@@ -24,5 +28,41 @@
         enable = true;
         worker = "elf";
       };
+      perSystem =
+        { lib, pkgs, ... }:
+        let
+          nodeModules = pkgs.importNpmLock.buildNodeModules {
+            npmRoot = ./.;
+            nodejs = pkgs.nodejs;
+          };
+        in
+        {
+          treefmt.programs.actionlint.enable = true;
+          nullkomma.tests = {
+            r-testthat-installed.command = lib.mkBefore ''
+              export SHINYTEST=true
+            '';
+            source-quality = {
+              packages = [
+                pkgs.gitleaks
+                pkgs.nodejs
+                pkgs.markdownlint-cli
+                pkgs.yamllint
+              ];
+              command = ''
+                gitleaks dir --no-banner --redact .
+                node ${nodeModules}/node_modules/jscpd/bin/jscpd --silent --ignore '**/pkg.lock,**/flake.lock,**/package-lock.json' .
+                markdownlint --dot --ignore 'tests/testthat/_snaps/**' .
+                yamllint .
+              '';
+            };
+          };
+          nullkomma.tasks.secret-history = {
+            description = "Scan Git history for secrets (local checkout only)";
+            skip = true;
+            packages = [ pkgs.gitleaks ];
+            command = "gitleaks git --no-banner --redact .";
+          };
+        };
     };
 }
