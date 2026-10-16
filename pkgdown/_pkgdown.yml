@@ -4,7 +4,6 @@ authors:
     href: http://www.maxheld.de
 template:
   bootstrap: 5
-  bootswatch: cosmo
 reference:
   - title: Dependencies
   - contents:
