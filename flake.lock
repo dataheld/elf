@@ -14,16 +14,14 @@
       "locked": {
         "lastModified": 1792081660,
         "narHash": "sha256-M05HjIJO2TkswpT9yMRUe64gyNOMRLeZKDJ9t34aFcY=",
-        "ref": "refs/heads/main",
         "rev": "a65dc58d240d0d97b4ff58fba36b0c288fabf00f",
         "revCount": 2,
-        "type": "git",
-        "url": "file:///Users/max/GitHub/dataheld/brand"
+        "type": "tarball",
+        "url": "https://api.flakehub.com/f/pinned/dataheld/brand/0.1.2%2Brev-a65dc58d240d0d97b4ff58fba36b0c288fabf00f/01a14068-2ec0-73c1-aaa9-6da3a4973e23/source.tar.gz"
       },
       "original": {
-        "rev": "a65dc58d240d0d97b4ff58fba36b0c288fabf00f",
-        "type": "git",
-        "url": "file:///Users/max/GitHub/dataheld/brand"
+        "type": "tarball",
+        "url": "https://flakehub.com/f/dataheld/brand/0.1.2.tar.gz"
       }
     },
     "flake-parts": {

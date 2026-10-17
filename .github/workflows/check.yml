@@ -11,22 +11,17 @@ jobs:
         with:
           persist-credentials: false
       - uses: DeterminateSystems/nix-installer-action@v21
-      - name: Fetch the pinned Git inputs
+      - name: Fetch the pinned nullkomma input
         env:
           GH_TOKEN: ${{ secrets.NULLKOMMA_INPUTS_READ_TOKEN }}
         run: |
           gh auth setup-git
-          for input in nullkomma brand; do
-            rev="$(jq -r ".nodes[\"$input\"].locked.rev" flake.lock)"
-            gh repo clone "dataheld/$input" "$RUNNER_TEMP/$input" -- --no-checkout
-            git -C "$RUNNER_TEMP/$input" checkout --detach "$rev"
-          done
+          rev="$(jq -r .nodes.nullkomma.locked.rev flake.lock)"
+          gh repo clone dataheld/nullkomma "$RUNNER_TEMP/nullkomma" -- --no-checkout
+          git -C "$RUNNER_TEMP/nullkomma" checkout --detach "$rev"
       - name: Check without publishing or changing the lockfile
         run: |
           nullkomma_rev="$(jq -r .nodes.nullkomma.locked.rev flake.lock)"
-          brand_rev="$(jq -r .nodes.brand.locked.rev flake.lock)"
           nix flake check --no-write-lock-file \
             --override-input nullkomma \
-              "git+file://$RUNNER_TEMP/nullkomma?rev=$nullkomma_rev" \
-            --override-input brand \
-              "git+file://$RUNNER_TEMP/brand?rev=$brand_rev"
+              "git+file://$RUNNER_TEMP/nullkomma?rev=$nullkomma_rev"

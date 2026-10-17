@@ -40,7 +40,7 @@ notes, and development tests still fail on warnings.
 
 The replacement GitHub workflow is **manual-only**: commits and pull requests
 never start it. It needs a `NULLKOMMA_INPUTS_READ_TOKEN` Actions secret with
-read access to the pinned nullkomma and brand repositories. It checks, but
+read access to the pinned nullkomma repository. It checks, but
 never deploys. Keep it undispatched until CI is explicitly wanted.
 
 `DESCRIPTION` declares dependencies; commit `pkg.lock` after refreshing it.
@@ -49,10 +49,10 @@ The pak lockfile records dependency resolution, not the versions installed by
 Nix. No project R startup files or mutable package library are required.
 
 During this migration, `flake.nix` deliberately references the local nullkomma
-R-support worktree and local brand repository, pinned to committed revisions.
-Other machines must supply those repositories at the recorded paths or override
-the inputs with Git URLs at the same revisions. This does not depend on a
-FlakeHub release of nullkomma.
+R-support worktree, pinned to a committed revision. Other machines must supply
+that repository at the recorded path or override the input with a Git URL at
+the same revision. The brand input uses its published FlakeHub release; this
+does not depend on a FlakeHub release of nullkomma.
 
 ## Website and publishing
 
