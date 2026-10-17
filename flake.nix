@@ -2,7 +2,7 @@
   description = "Assorted R helpers, developed with nullkomma";
 
   inputs = {
-    nullkomma.url = "git+file:///Users/max/GitHub/nullkomma/.worktrees/maxheld83-issue-113-adopt-configurable-flake-derivations-0a37c5?ref=maxheld83-nullkomma-composability-design-review&rev=c98679ac52850b29551fafb79056b4b8a4dc0086";
+    nullkomma.url = "git+file:///Users/max/GitHub/nullkomma/.worktrees/maxheld83-issue-113-adopt-configurable-flake-derivations-0a37c5?ref=maxheld83-nullkomma-composability-design-review&rev=63b102334859a34b1e7ccb0f2629c23645ad1098";
     nixpkgs.follows = "nullkomma/nixpkgs";
     brand = {
       url = "git+file:///Users/max/GitHub/dataheld/brand?rev=a65dc58d240d0d97b4ff58fba36b0c288fabf00f";

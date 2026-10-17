@@ -59,7 +59,9 @@ FlakeHub release of nullkomma.
 The website keeps the existing pkgdown reference groups. Its design and legal
 footer come from the pinned [dataheld/brand](https://github.com/dataheld/brand)
 input; shared privacy sections include the controller, rights and Cloudflare
-hosting information. `nix build .#site` produces `result/`, while `r-pkgdown`
+hosting information. The generated source, `pkgdown/privacy.md`, is ignored by
+Git and excluded from R package builds; its public URL remains `/privacy.html`.
+`nix build .#site` produces `result/`, while `r-pkgdown`
 builds a preview in the Git-ignored `docs/` directory. pkgdown generates the
 sidebar from package metadata, retaining source, issues, license, citation and
 author links; nullkomma disables network-dependent CRAN/Bioconductor discovery.

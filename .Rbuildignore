@@ -22,4 +22,4 @@
 ^pkgdown$
 ^coverage[.]xml$
 ^pkg\.lock$
-^privacy\.md$
+^pkgdown/privacy\.md$

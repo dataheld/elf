@@ -104,17 +104,17 @@
         "up": "up"
       },
       "locked": {
-        "lastModified": 1792225794,
-        "narHash": "sha256-ZkoAI4UW/VGT7rJvuCXqYGJi0/QGLhPc5U6H1Kdewpg=",
+        "lastModified": 1792226370,
+        "narHash": "sha256-8f5w4haihpTKis7H8eqosfPwf80RMprKumSwR4nWOSQ=",
         "ref": "maxheld83-nullkomma-composability-design-review",
-        "rev": "c98679ac52850b29551fafb79056b4b8a4dc0086",
-        "revCount": 359,
+        "rev": "63b102334859a34b1e7ccb0f2629c23645ad1098",
+        "revCount": 360,
         "type": "git",
         "url": "file:///Users/max/GitHub/nullkomma/.worktrees/maxheld83-issue-113-adopt-configurable-flake-derivations-0a37c5"
       },
       "original": {
         "ref": "maxheld83-nullkomma-composability-design-review",
-        "rev": "c98679ac52850b29551fafb79056b4b8a4dc0086",
+        "rev": "63b102334859a34b1e7ccb0f2629c23645ad1098",
         "type": "git",
         "url": "file:///Users/max/GitHub/nullkomma/.worktrees/maxheld83-issue-113-adopt-configurable-flake-derivations-0a37c5"
       }
