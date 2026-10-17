@@ -3,7 +3,6 @@
 ^\.jscpd\.json$
 ^package(-lock)?\.json$
 ^report$
-^_typos[.]toml$
 [.]nix$
 ^flake[.]lock$
 ^[.]envrc$
