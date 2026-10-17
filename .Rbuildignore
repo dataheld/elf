@@ -1,9 +1,6 @@
 ^.*\.Rproj$
 ^\.Rproj\.user$
 ^\.jscpd\.json$
-^\.lintr$
-^\.markdownlint\.yml$
-^\.yamllint$
 ^package(-lock)?\.json$
 ^report$
 ^_typos[.]toml$
