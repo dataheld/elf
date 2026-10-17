@@ -15,10 +15,7 @@
     inputs.nullkomma.lib.mkFlake { inherit inputs; } {
       imports = [ inputs.brand.flakeModules.privacy ];
       nullkomma.github.enable = false;
-      nullkomma.gitignore = [
-        "/node_modules/"
-        "/report/"
-      ];
+      nullkomma.gitignore = [ "/report/" ];
       nullkomma.r = {
         enable = true;
         pkgdown = {
