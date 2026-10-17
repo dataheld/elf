@@ -7,6 +7,7 @@
 ^[.]Rprofile$
 ^[.]R$
 ^[.]direnv$
+^[.]git$
 ^[.]github$
 ^[.]vscode$
 ^result(-.*)?$
