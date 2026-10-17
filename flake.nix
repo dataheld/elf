@@ -1,5 +1,5 @@
 {
-  description = "Assorted R helpers, developed with nullkomma";
+  description = "elf: Assorted R helpers";
 
   inputs = {
     nullkomma.url = "git+file:///Users/max/GitHub/nullkomma/.worktrees/maxheld83-issue-113-adopt-configurable-flake-derivations-0a37c5?ref=maxheld83-nullkomma-composability-design-review&rev=63b102334859a34b1e7ccb0f2629c23645ad1098";
