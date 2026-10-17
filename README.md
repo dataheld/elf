@@ -32,11 +32,12 @@ nix flake check
 `nix fmt` runs Air and the shared formatters/checkers, including R, Markdown
 and YAML linting, secret scanning and workflow validation. Generated outputs are
 excluded by the shared configuration; Markdown snapshots retain their lint
-exclusion. `test-source-quality` retains duplicate code detection.
+exclusion. `r-jscpd` runs shared duplicate code detection.
 `secret-history` additionally scans
 the local Git history; it is separate because Nix check sandboxes have no Git
-history. Installed-package tests retain `SHINYTEST=true`; R CMD check fails on
-notes, and development tests still fail on warnings.
+history. Tests run in parallel, including outside Nix through `DESCRIPTION`.
+Shared defaults retain `SHINYTEST=true`; R CMD check fails on notes, and
+development tests still fail on warnings.
 
 The replacement GitHub workflow is **manual-only**: commits and pull requests
 never start it. It needs a `NULLKOMMA_INPUTS_READ_TOKEN` Actions secret with

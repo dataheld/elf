@@ -1,8 +1,5 @@
 ^.*\.Rproj$
 ^\.Rproj\.user$
-^\.jscpd\.json$
-^package(-lock)?\.json$
-^report$
 [.]nix$
 ^flake[.]lock$
 ^[.]envrc$
