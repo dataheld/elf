@@ -29,9 +29,11 @@ nix build .#site
 nix flake check
 ```
 
-`nix fmt` runs Air and the shared non-R formatters/checkers, including
-workflow validation. `test-source-quality` retains secret scanning, duplicate
-code detection, Markdown and YAML checks. `secret-history` additionally scans
+`nix fmt` runs Air and the shared formatters/checkers, including R, Markdown
+and YAML linting and workflow validation. Generated outputs are excluded by the
+shared configuration; Markdown snapshots retain their lint exclusion.
+`test-source-quality` retains secret scanning and duplicate code detection.
+`secret-history` additionally scans
 the local Git history; it is separate because Nix check sandboxes have no Git
 history. Installed-package tests retain `SHINYTEST=true`; R CMD check fails on
 notes, and development tests still fail on warnings.
