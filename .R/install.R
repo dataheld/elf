@@ -1,6 +1,6 @@
 local({
   library <- getOption("nullkomma.r.library")
-  if (nzchar(Sys.getenv("IN_NIX_SHELL"))) {
+  if (any(nzchar(Sys.getenv(c("IN_NIX_SHELL", "NIX_BUILD_TOP", "NULLKOMMA_R_NIX"))))) {
     stop("Run this installer outside Nix; Nix supplies the R dependencies in its development shell.", call. = FALSE)
   }
   if (is.null(library)) {
