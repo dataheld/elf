@@ -1,0 +1,5 @@
+NULLKOMMA_R_VERSION="4.5.3"
+NULLKOMMA_PPM_SNAPSHOT="2026-10-07"
+NULLKOMMA_PPM_URL="https://packagemanager.posit.co/cran/2026-10-07"
+NULLKOMMA_R_DEPENDENCIES="Depends,Imports,LinkingTo,Suggests,Config/Needs/website"
+NULLKOMMA_R_ALL_CONFIG_NEEDS=true

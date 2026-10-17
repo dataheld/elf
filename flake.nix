@@ -14,10 +14,8 @@
     inputs:
     inputs.nullkomma.lib.mkFlake { inherit inputs; } {
       nullkomma.github.enable = false;
-      nullkomma.r = {
-        enable = true;
-        pkgdown.brand = inputs.brand;
-      };
+      nullkomma.r-non-nix.enable = true;
+      nullkomma.r.pkgdown.brand = inputs.brand;
       nullkomma.cloudflare = {
         enable = true;
         worker = "elf";

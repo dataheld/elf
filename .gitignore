@@ -9,6 +9,7 @@ result
 result-*
 .direnv/
 /.nullkomma/cloudflare/
+.R/library/
 /.nvim.lua
 /.vscode/extensions.json
 /.vscode/settings.json
