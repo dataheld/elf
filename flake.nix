@@ -2,7 +2,7 @@
   description = "elf: Assorted R helpers";
 
   inputs = {
-    nullkomma.url = "git+file:///Users/max/GitHub/nullkomma/.worktrees/maxheld83-issue-113-adopt-configurable-flake-derivations-0a37c5?ref=maxheld83-nullkomma-composability-design-review&rev=4b3f149e55812378655259a7b2aef97a52751da8";
+    nullkomma.url = "git+file:///Users/max/GitHub/nullkomma/.worktrees/maxheld83-issue-113-adopt-configurable-flake-derivations-0a37c5?ref=maxheld83-nullkomma-composability-design-review&rev=1673ff14b7f17c33a8ddaca5aadaa8b5e5f01878";
     nixpkgs.follows = "nullkomma/nixpkgs";
     brand = {
       url = "https://flakehub.com/f/dataheld/brand/0.1.2.tar.gz";
