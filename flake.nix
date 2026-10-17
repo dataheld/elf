@@ -2,7 +2,7 @@
   description = "Assorted R helpers, developed with nullkomma";
 
   inputs = {
-    nullkomma.url = "git+file:///Users/max/GitHub/nullkomma/.worktrees/maxheld83-issue-113-adopt-configurable-flake-derivations-0a37c5?ref=maxheld83-nullkomma-composability-design-review&rev=f9cbc6f1dd8e49e32aa3438c67a3f586bf1b6d26";
+    nullkomma.url = "git+file:///Users/max/GitHub/nullkomma/.worktrees/maxheld83-issue-113-adopt-configurable-flake-derivations-0a37c5?ref=maxheld83-nullkomma-composability-design-review&rev=9742fc198378d22f5a3de6c74d012261ca0702b8";
     nixpkgs.follows = "nullkomma/nixpkgs";
     brand = {
       url = "git+file:///Users/max/GitHub/dataheld/brand?rev=a65dc58d240d0d97b4ff58fba36b0c288fabf00f";
@@ -22,7 +22,6 @@
           enable = true;
           config = {
             template.bslib.brand = inputs.brand.lib.brand;
-            home.sidebar.html = "pkgdown/sidebar.html";
             footer = {
               structure.left = "brand";
               components.brand = builtins.replaceStrings [ "<footer " "</footer>" ] [ "<div " "</div>" ] (
@@ -30,7 +29,6 @@
               );
             };
           };
-          override = { };
         };
         check.errorOn = "note";
       };
@@ -59,6 +57,11 @@
             grep -qF '🌲' "$site/index.html"
             grep -qF '·' "$site/index.html"
             grep -qF 'https://github.com/dataheld/elf/issues' "$site/index.html"
+            grep -qF 'https://github.com/dataheld/elf' "$site/index.html"
+            grep -qF 'LICENSE-text.html' "$site/index.html"
+            test -s "$site/LICENSE-text.html"
+            grep -qF 'authors.html#citation' "$site/index.html"
+            grep -qF '0000-0002-4703-5388' "$site/index.html"
             grep -qF 'https://www.maxheld.de/imprint.html' "$site/index.html"
             grep -qF 'href="/privacy.html"' "$site/index.html"
             grep -qF '#453AA4' "$site"/deps/bootstrap-*/*.css
