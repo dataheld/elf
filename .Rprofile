@@ -1,5 +1,5 @@
 local({
-  if (!any(nzchar(Sys.getenv(c("IN_NIX_SHELL", "NIX_BUILD_TOP", "NULLKOMMA_R_NIX"))))) {
+  if (!nzchar(Sys.getenv("NULLKOMMA_R_NIX"))) {
     required <- c("NULLKOMMA_R_VERSION", "NULLKOMMA_PPM_URL", "NULLKOMMA_R_DEPENDENCIES")
     if (any(!nzchar(Sys.getenv(required)))) {
       stop("Missing project R settings; restore .Renviron and restart R.", call. = FALSE)

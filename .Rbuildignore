@@ -1,5 +1,7 @@
 ^.*\.Rproj$
 ^\.Rproj\.user$
+
+# nullkomma:r:start
 [.]nix$
 ^flake[.]lock$
 ^[.]envrc$
@@ -10,10 +12,10 @@
 ^[.]git$
 ^[.]github$
 ^[.]vscode$
+^[.]nvim[.]lua$
 ^result(-.*)?$
 ^docs$
 ^pkgdown$
 ^coverage[.]xml$
-^pkg\.lock$
-^pkgdown/privacy\.md$
-^[.]nvim[.]lua$
+^pkg[.]lock$
+# nullkomma:r:end

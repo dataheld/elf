@@ -13,7 +13,7 @@ result-*
 /.nvim.lua
 /.vscode/extensions.json
 /.vscode/settings.json
-/pkgdown/privacy.md
+/.github/privacy.md
 !man/figures/
 ~*.xlsx
 ~*.xlsm
