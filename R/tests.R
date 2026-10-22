@@ -51,7 +51,7 @@ make_skip_if_not_function <- function(check.fun) {
   function(...) {
     res <- check.fun(...)
     if (isTRUE(res)) {
-      return(invisible())
+      invisible()
     } else {
       testthat::skip(res)
     }

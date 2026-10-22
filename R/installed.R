@@ -16,7 +16,7 @@ check_pkg_installed <- function(x = character(1L)) {
     return(res)
   }
   if (rlang::is_installed(x)) {
-    return(TRUE)
+    TRUE
   } else {
     glue::glue("Package {x} is not installed")
   }

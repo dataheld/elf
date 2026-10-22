@@ -49,4 +49,4 @@ Collate:
     'tests.R'
     'installed.R'
     'options.R'
-RoxygenNote: 7.3.2
+RoxygenNote: 7.3.3

@@ -10,7 +10,7 @@
 #' Usually this will mean that it's best to place `source_pef()`
 #' at the end of a source file to which it pertains (say, the examples).
 #' If it uses objects from other files,
-#' manual collation instructions via `#' @include foo.R` may be neeeded,
+#' manual collation instructions via `#' @include foo.R` may be needed,
 #' but that will quickly make the package unwieldy.
 #' @inheritParams fs::path_package
 #' @family path helpers

@@ -8,10 +8,12 @@
 #' @inheritParams withr::defer
 #' @family options helpers
 #' @export
-opt_set_local2 <- function(x,
-                           value,
-                           envir = parent.frame(),
-                           priority = c("first", "last")) {
+opt_set_local2 <- function(
+  x,
+  value,
+  envir = parent.frame(),
+  priority = c("first", "last")
+) {
   old <- options::opt_set(x = x, value = value, env = envir)
   # cannot just extend withr::local_ here,
   # because it has slightly different semantics

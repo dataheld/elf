@@ -40,10 +40,12 @@ inform_missing_pkgs <- function(pkg, ...) {
 # copied, slightly adapted from rlang
 # nolint start
 
-new_message_package_not_found <- function(pkg,
-                                          version = NULL,
-                                          compare = NULL,
-                                          reason = NULL) {
+new_message_package_not_found <- function(
+  pkg,
+  version = NULL,
+  compare = NULL,
+  reason = NULL
+) {
   rlang::message_cnd(
     class = "elf_message_package_not_found",
     pkg = pkg,
@@ -64,18 +66,23 @@ cnd_header.elf_message_package_not_found <- function(cnd) {
   pkg_enum <- chr_quoted(cnd$pkg, type = "\"")
 
   if (!rlang::is_null(version)) {
-    pkg_enum <- purrr::list_c(purrr::pmap(list(pkg_enum, compare, version), function(p, o, v) {
-      if (rlang::is_na(v)) {
-        p
-      } else {
-        sprintf("%s (%s %s)", p, o, v)
+    pkg_enum <- purrr::list_c(purrr::pmap(
+      list(pkg_enum, compare, version),
+      function(p, o, v) {
+        if (rlang::is_na(v)) {
+          p
+        } else {
+          sprintf("%s (%s %s)", p, o, v)
+        }
       }
-    }))
+    ))
   }
 
   pkg_enum <- oxford_comma(pkg_enum, final = "and")
 
-  info <- cli::pluralize("The optional package{?s} {pkg_enum} {?is/are} missing.")
+  info <- cli::pluralize(
+    "The optional package{?s} {pkg_enum} {?is/are} missing."
+  )
 
   if (rlang::is_null(reason)) {
     paste0(info, ".")
