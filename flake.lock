@@ -102,19 +102,16 @@
         "up": "up"
       },
       "locked": {
-        "lastModified": 1792655763,
-        "narHash": "sha256-DS8hLtZ4jNUq6hvz8IfvMrdI3vtX9F8+cCt5S/eV4q4=",
-        "ref": "maxheld83-nullkomma-composability-design-review",
-        "rev": "f40cb223558882777ac83c0c0d232801e4752be1",
-        "revCount": 401,
-        "type": "git",
-        "url": "file:///Users/max/GitHub/nullkomma/.worktrees/maxheld83-issue-113-adopt-configurable-flake-derivations-0a37c5"
+        "lastModified": 1792673398,
+        "narHash": "sha256-Sn/HwgZmF70o6Tf3U4ZDKHCQ3ofDrGxIMmlJGGsYtLY=",
+        "rev": "559c299ddac39f2571bb381e1165d19c74a07ea2",
+        "revCount": 405,
+        "type": "tarball",
+        "url": "https://api.flakehub.com/f/pinned/dataheld/nullkomma/0.1.405%2Brev-559c299ddac39f2571bb381e1165d19c74a07ea2/01a163ae-cd70-7fd1-b80c-7e3655a3966c/source.tar.gz"
       },
       "original": {
-        "ref": "maxheld83-nullkomma-composability-design-review",
-        "rev": "f40cb223558882777ac83c0c0d232801e4752be1",
-        "type": "git",
-        "url": "file:///Users/max/GitHub/nullkomma/.worktrees/maxheld83-issue-113-adopt-configurable-flake-derivations-0a37c5"
+        "type": "tarball",
+        "url": "https://flakehub.com/f/dataheld/nullkomma/0.1.405.tar.gz"
       }
     },
     "root": {

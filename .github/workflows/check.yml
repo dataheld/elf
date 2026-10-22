@@ -1,5 +1,6 @@
-name: Local-pin package checks
+name: Package checks
 on:
+  pull_request:
   workflow_dispatch:
 permissions:
   contents: read
@@ -11,17 +12,6 @@ jobs:
         with:
           persist-credentials: false
       - uses: DeterminateSystems/nix-installer-action@v21
-      - name: Fetch the pinned nullkomma input
-        env:
-          GH_TOKEN: ${{ secrets.NULLKOMMA_INPUTS_READ_TOKEN }}
-        run: |
-          gh auth setup-git
-          rev="$(jq -r .nodes.nullkomma.locked.rev flake.lock)"
-          gh repo clone dataheld/nullkomma "$RUNNER_TEMP/nullkomma" -- --no-checkout
-          git -C "$RUNNER_TEMP/nullkomma" checkout --detach "$rev"
       - name: Check without publishing or changing the lockfile
         run: |
-          nullkomma_rev="$(jq -r .nodes.nullkomma.locked.rev flake.lock)"
-          nix flake check --no-write-lock-file \
-            --override-input nullkomma \
-              "git+file://$RUNNER_TEMP/nullkomma?rev=$nullkomma_rev"
+          nix flake check --no-write-lock-file
