@@ -12,16 +12,16 @@
         ]
       },
       "locked": {
-        "lastModified": 1792081660,
-        "narHash": "sha256-M05HjIJO2TkswpT9yMRUe64gyNOMRLeZKDJ9t34aFcY=",
-        "rev": "a65dc58d240d0d97b4ff58fba36b0c288fabf00f",
-        "revCount": 2,
+        "lastModified": 1792768557,
+        "narHash": "sha256-RO4zqZolbuOeq1G1pO8JTAHNfjMckh2I856PG/mfdlc=",
+        "rev": "9b30b65c6a4a782d8845a0b1f857cd5434e04940",
+        "revCount": 15,
         "type": "tarball",
-        "url": "https://api.flakehub.com/f/pinned/dataheld/brand/0.1.2%2Brev-a65dc58d240d0d97b4ff58fba36b0c288fabf00f/01a14068-2ec0-73c1-aaa9-6da3a4973e23/source.tar.gz"
+        "url": "https://api.flakehub.com/f/pinned/dataheld/brand/0.1.15%2Brev-9b30b65c6a4a782d8845a0b1f857cd5434e04940/01a1695a-42ef-73d2-8fa4-222bad88f84c/source.tar.gz"
       },
       "original": {
         "type": "tarball",
-        "url": "https://flakehub.com/f/dataheld/brand/0.1.2.tar.gz"
+        "url": "https://flakehub.com/f/dataheld/brand/%2A"
       }
     },
     "flake-parts": {
@@ -102,16 +102,16 @@
         "up": "up"
       },
       "locked": {
-        "lastModified": 1792673398,
-        "narHash": "sha256-Sn/HwgZmF70o6Tf3U4ZDKHCQ3ofDrGxIMmlJGGsYtLY=",
-        "rev": "559c299ddac39f2571bb381e1165d19c74a07ea2",
-        "revCount": 405,
+        "lastModified": 1792786654,
+        "narHash": "sha256-AIt/UX9liAsK1GpGUIWvEYQRT239AkMviI2MKyf5H5U=",
+        "rev": "e142bbcff1d56af28388e01b42f0bb985e987177",
+        "revCount": 442,
         "type": "tarball",
-        "url": "https://api.flakehub.com/f/pinned/dataheld/nullkomma/0.1.405%2Brev-559c299ddac39f2571bb381e1165d19c74a07ea2/01a163ae-cd70-7fd1-b80c-7e3655a3966c/source.tar.gz"
+        "url": "https://api.flakehub.com/f/pinned/dataheld/nullkomma/0.1.442%2Brev-e142bbcff1d56af28388e01b42f0bb985e987177/01a16a70-9fd6-71d3-b8b8-817bd9632a61/source.tar.gz"
       },
       "original": {
         "type": "tarball",
-        "url": "https://flakehub.com/f/dataheld/nullkomma/0.1.405.tar.gz"
+        "url": "https://flakehub.com/f/dataheld/nullkomma/%2A"
       }
     },
     "root": {
