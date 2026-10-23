@@ -2,8 +2,6 @@ url: https://elf.maxheld.de
 authors:
   Maximilian Held:
     href: http://www.maxheld.de
-template:
-  bootstrap: 5
 reference:
   - title: Dependencies
   - contents:
