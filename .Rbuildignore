@@ -4,6 +4,8 @@
 # nullkomma:r:start
 [.]nix$
 ^flake[.]lock$
+^[.]agents$
+^AGENTS[.]md$
 ^[.]envrc$
 ^[.]Renviron$
 ^[.]Rprofile$
@@ -13,9 +15,11 @@
 ^[.]github$
 ^[.]vscode$
 ^[.]nvim[.]lua$
+^[.]nullkomma$
 ^result(-.*)?$
 ^docs$
 ^pkgdown$
 ^coverage[.]xml$
 ^pkg[.]lock$
+^docs$
 # nullkomma:r:end

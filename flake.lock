@@ -1,29 +1,5 @@
 {
   "nodes": {
-    "brand": {
-      "inputs": {
-        "nixpkgs": [
-          "brand",
-          "nullkomma",
-          "nixpkgs"
-        ],
-        "nullkomma": [
-          "nullkomma"
-        ]
-      },
-      "locked": {
-        "lastModified": 1792768557,
-        "narHash": "sha256-RO4zqZolbuOeq1G1pO8JTAHNfjMckh2I856PG/mfdlc=",
-        "rev": "9b30b65c6a4a782d8845a0b1f857cd5434e04940",
-        "revCount": 15,
-        "type": "tarball",
-        "url": "https://api.flakehub.com/f/pinned/dataheld/brand/0.1.15%2Brev-9b30b65c6a4a782d8845a0b1f857cd5434e04940/01a1695a-42ef-73d2-8fa4-222bad88f84c/source.tar.gz"
-      },
-      "original": {
-        "type": "tarball",
-        "url": "https://flakehub.com/f/dataheld/brand/%2A"
-      }
-    },
     "flake-parts": {
       "inputs": {
         "nixpkgs-lib": [
@@ -73,6 +49,49 @@
         "type": "github"
       }
     },
+    "maxheld": {
+      "inputs": {
+        "modern2-cv": "modern2-cv",
+        "nixpkgs": [
+          "maxheld",
+          "nullkomma",
+          "nixpkgs"
+        ],
+        "nullkomma": [
+          "nullkomma"
+        ],
+        "pillar": "pillar"
+      },
+      "locked": {
+        "lastModified": 1793032852,
+        "narHash": "sha256-17Ah7o/NJb1Te81TKDDfgtSumV9QJ8RRhnNV8qE4ZP8=",
+        "rev": "83c05ac1282b2add9516117102c2a561d709b27e",
+        "revCount": 220,
+        "type": "tarball",
+        "url": "https://api.flakehub.com/f/pinned/dataheld/maxheld/0.1.220%2Brev-83c05ac1282b2add9516117102c2a561d709b27e/01a1791d-37f5-7b53-b196-0de5224abeae/source.tar.gz"
+      },
+      "original": {
+        "type": "tarball",
+        "url": "https://flakehub.com/f/dataheld/maxheld/%2A"
+      }
+    },
+    "modern2-cv": {
+      "flake": false,
+      "locked": {
+        "lastModified": 1730144289,
+        "narHash": "sha256-g26OWmYGlcMH0n0nrGxM/qXbHnQAcc16ZKRy2KaEWBw=",
+        "owner": "schochastics",
+        "repo": "modern2-cv",
+        "rev": "14147a8da77a7afafe9140c7ef32f2cccaddcfcb",
+        "type": "github"
+      },
+      "original": {
+        "owner": "schochastics",
+        "repo": "modern2-cv",
+        "rev": "14147a8da77a7afafe9140c7ef32f2cccaddcfcb",
+        "type": "github"
+      }
+    },
     "nixpkgs": {
       "locked": {
         "lastModified": 1791353474,
@@ -102,21 +121,38 @@
         "up": "up"
       },
       "locked": {
-        "lastModified": 1792848421,
-        "narHash": "sha256-Afh6PbcxYPWoTOsQIzUpxug3yhPGLtgW6lD1uh791G4=",
-        "rev": "02a9b440a43ebbed44610e24ef5b137cc17e4553",
-        "revCount": 464,
+        "lastModified": 1793049623,
+        "narHash": "sha256-xAu05L+aMSxKG71q7yFUbhzW/DmY82CIH3sC7Wb7FxY=",
+        "rev": "cf176d7a0652e160ef0f2fbbd4ce943deb443eca",
+        "revCount": 533,
         "type": "tarball",
-        "url": "https://api.flakehub.com/f/pinned/dataheld/nullkomma/0.1.464%2Brev-02a9b440a43ebbed44610e24ef5b137cc17e4553/01a16e1e-d138-7d23-8baa-7b4feca285b5/source.tar.gz"
+        "url": "https://api.flakehub.com/f/pinned/dataheld/nullkomma/0.1.533%2Brev-cf176d7a0652e160ef0f2fbbd4ce943deb443eca/01a17a1e-5146-7da0-a4de-85d449cf8ec4/source.tar.gz"
       },
       "original": {
         "type": "tarball",
         "url": "https://flakehub.com/f/dataheld/nullkomma/%2A"
       }
     },
+    "pillar": {
+      "flake": false,
+      "locked": {
+        "lastModified": 1687682392,
+        "narHash": "sha256-QFjaC3QfxTGGt3JcPYeuNaZMRvo7bOMIHHyqzCoEpHs=",
+        "owner": "xriley",
+        "repo": "pillar-theme",
+        "rev": "dbe51083f1566b748c7b3cf81f3d1069b634608e",
+        "type": "github"
+      },
+      "original": {
+        "owner": "xriley",
+        "repo": "pillar-theme",
+        "rev": "dbe51083f1566b748c7b3cf81f3d1069b634608e",
+        "type": "github"
+      }
+    },
     "root": {
       "inputs": {
-        "brand": "brand",
+        "maxheld": "maxheld",
         "nixpkgs": [
           "nullkomma",
           "nixpkgs"
