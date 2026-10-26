@@ -4,9 +4,9 @@
   inputs = {
     nullkomma.url = "https://flakehub.com/f/dataheld/nullkomma/*";
     nixpkgs.follows = "nullkomma/nixpkgs";
-    brand = {
-      url = "https://flakehub.com/f/dataheld/brand/*";
-      # The brand flake's own CI config still uses nullkomma.github.ci.inputs.
+    maxheld = {
+      url = "https://flakehub.com/f/dataheld/maxheld/*";
+      inputs.nullkomma.follows = "nullkomma";
     };
   };
 
@@ -18,7 +18,7 @@
         nonNix.enable = true;
         pkgdown.brand.enable = true;
       };
-      nullkomma.brand = inputs.brand;
+      nullkomma.brand = inputs.maxheld;
       nullkomma.cloudflare = {
         enable = true;
         domain = "maxheld.de";
