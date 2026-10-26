@@ -8,8 +8,6 @@ test_that("missing package is identified", {
 
 test_that("present package is identified", {
   withr::local_options(rlib_message_verbosity = "verbose")
-  expect_silent(
-    installed <- source_pef_elf("dependencies", "is_installed2", "present")
-  )
-  expect_true(installed)
+  expect_silent(source_pef_elf("dependencies", "is_installed2", "present"))
+  expect_true(source_pef_elf("dependencies", "is_installed2", "present"))
 })
