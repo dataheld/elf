@@ -9,8 +9,6 @@ concurrency:
 jobs:
   nullkomma:
     uses: dataheld/nullkomma/.github/workflows/ci.yml@main
-    with:
-      visibility: unlisted
     permissions:
       contents: read
       id-token: write

@@ -13,9 +13,11 @@
 ^[.]github$
 ^[.]vscode$
 ^[.]nvim[.]lua$
+^[.]nullkomma$
 ^result(-.*)?$
 ^docs$
 ^pkgdown$
 ^coverage[.]xml$
 ^pkg[.]lock$
+^docs$
 # nullkomma:r:end
