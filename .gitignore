@@ -12,6 +12,8 @@ result-*
 /.nullkomma/processes/
 .R/library/
 /.nvim.lua
+/.agents/skills/nullkomma-resolve-file-conflicts
+/.agents/skills/nullkomma-upgrade
 /.vscode/extensions.json
 /.vscode/settings.json
 !man/figures/

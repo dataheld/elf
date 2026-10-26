@@ -4,6 +4,8 @@
 # nullkomma:r:start
 [.]nix$
 ^flake[.]lock$
+^[.]agents$
+^AGENTS[.]md$
 ^[.]envrc$
 ^[.]Renviron$
 ^[.]Rprofile$

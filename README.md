@@ -22,7 +22,7 @@ for plugin configuration and development documentation.
 
 You do not need Nix or direnv to run or develop this package.
 
-> **Note:**
+> [! NOTE]
 > Developing without nix provides only limited reproducibility of the environment.
 > The PPM date *approximates* the Nix package set:
 > R package versions can differ,
