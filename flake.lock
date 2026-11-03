@@ -115,18 +115,19 @@
           "nullkomma",
           "nixpkgs"
         ],
+        "process-compose-flake": "process-compose-flake",
         "terraform-providers-bin": "terraform-providers-bin",
         "terranix": "terranix",
         "treefmt-nix": "treefmt-nix",
         "up": "up"
       },
       "locked": {
-        "lastModified": 1793049623,
-        "narHash": "sha256-xAu05L+aMSxKG71q7yFUbhzW/DmY82CIH3sC7Wb7FxY=",
-        "rev": "cf176d7a0652e160ef0f2fbbd4ce943deb443eca",
-        "revCount": 533,
+        "lastModified": 1793734664,
+        "narHash": "sha256-OpzV2C8vyy6GQJoaEZuY4okmGoknl7XUKvwjHtarcsI=",
+        "rev": "c89298d3ee845a7a683d0728fecf74a81afef832",
+        "revCount": 670,
         "type": "tarball",
-        "url": "https://api.flakehub.com/f/pinned/dataheld/nullkomma/0.1.533%2Brev-cf176d7a0652e160ef0f2fbbd4ce943deb443eca/01a17a1e-5146-7da0-a4de-85d449cf8ec4/source.tar.gz"
+        "url": "https://api.flakehub.com/f/pinned/dataheld/nullkomma/0.1.670%2Brev-c89298d3ee845a7a683d0728fecf74a81afef832/01a1a2f9-785f-7553-a57f-8a34c7d51ba0/source.tar.gz"
       },
       "original": {
         "type": "tarball",
@@ -147,6 +148,21 @@
         "owner": "xriley",
         "repo": "pillar-theme",
         "rev": "dbe51083f1566b748c7b3cf81f3d1069b634608e",
+        "type": "github"
+      }
+    },
+    "process-compose-flake": {
+      "locked": {
+        "lastModified": 1791992503,
+        "narHash": "sha256-ak6baHPCy6SUTskWRfxdlgF5mtEfFx9kIMskKVPpaMY=",
+        "owner": "Platonic-Systems",
+        "repo": "process-compose-flake",
+        "rev": "8e27bc993c0156b5e033ad5889094d65fd27f623",
+        "type": "github"
+      },
+      "original": {
+        "owner": "Platonic-Systems",
+        "repo": "process-compose-flake",
         "type": "github"
       }
     },
