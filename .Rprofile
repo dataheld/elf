@@ -1,3 +1,4 @@
+if (file.exists("~/.Rprofile")) source("~/.Rprofile")
 local({
   if (!nzchar(Sys.getenv("NULLKOMMA_R_NIX"))) {
     required <- c("NULLKOMMA_R_VERSION", "NULLKOMMA_PPM_URL", "NULLKOMMA_R_DEPENDENCIES")
@@ -28,3 +29,20 @@ local({
     }
   }
 })
+
+if (interactive()) {
+  local({
+    load <- function(...) {
+      tryCatch(pkgload::load_all(), error = function(e) {
+        message("Could not load the package with pkgload::load_all(): ", conditionMessage(e))
+      })
+    }
+    # R attaches the default packages after this profile; load the package above them.
+    pending <- setdiff(getOption("defaultPackages"), .packages())
+    if (length(pending)) {
+      setHook(packageEvent(pending[length(pending)], "attach"), load)
+    } else {
+      load()
+    }
+  })
+}

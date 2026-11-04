@@ -28,4 +28,5 @@ local({
     dependencies = getOption("nullkomma.r.dependencies"),
     ask = FALSE
   )
+  pak::pkg_install("pkgload", lib = library, ask = FALSE)
 })

@@ -31,9 +31,11 @@ You do not need Nix or direnv to run or develop this package.
 Install R or use the version you already have.
 The recommended version recorded in `.Renviron`.
 Then open this directory in R, and start a fresh R session.
-The committed `.Rprofile` reads `.Renviron`, selects the project's dated Posit
+The committed `.Rprofile` first runs your `~/.Rprofile`, if any.
+It then reads `.Renviron`, selects the project's dated Posit
 Package Manager (PPM) repository, and creates a writable library in
 `.R/library/<R-version>/<platform>/`.
+In interactive sessions, it then loads the package with `pkgload::load_all()`.
 
 Other user and site libraries on your machine are neither affected,
 nor used when the `.Rprofile` is used
@@ -47,7 +49,7 @@ Run this in the R console, from the directory containing `DESCRIPTION`:
 source(".R/install.R")
 ```
 
-This helper installs pak and the DESCRIPTION dependencies explicitly into the project
+This helper installs pak, pkgload and the DESCRIPTION dependencies explicitly into the project
 library, even if pak is already installed elsewhere.
 Re-run it to update dependencies.
 It refuses to run without the project profile or inside Nix.
@@ -58,7 +60,8 @@ pak chooses binaries when available, otherwise source packages.
 The local library is Git-ignored; do not commit it.
 
 The helper delegates resolution, downloads, caching and installation to
-[`pak::local_install_deps()`](https://pak.r-lib.org/reference/local_install_deps.html),
+[`pak::local_install_deps()`](https://pak.r-lib.org/reference/local_install_deps.html)
+and, for pkgload, [`pak::pkg_install()`](https://pak.r-lib.org/reference/pkg_install.html),
 with a single `lib` path.
 
 ### Add or remove dependencies
