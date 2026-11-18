@@ -1,3 +1,4 @@
+# nullkomma:r:start
 if (file.exists("~/.Rprofile")) source("~/.Rprofile")
 local({
   if (!nzchar(Sys.getenv("NULLKOMMA_R_NIX"))) {
@@ -46,3 +47,4 @@ if (interactive()) {
     }
   })
 }
+# nullkomma:r:end

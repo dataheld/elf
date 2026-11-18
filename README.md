@@ -18,12 +18,11 @@ nk write-files` refreshes it. See https://github.com/dataheld/nullkomma#readme
 for plugin configuration and development documentation.
 -->
 <!-- nullkomma:r-development:start -->
-## R development without Nix {.callout-tip}
+## R development without Nix
 
 You do not need Nix or direnv to run or develop this package.
 
-> [! NOTE]
-> Developing without nix provides only limited reproducibility of the environment.
+> **Note:** Developing without nix provides only limited reproducibility of the environment.
 > The PPM date *approximates* the Nix package set:
 > R package versions can differ,
 > and neither your R installation nor system libraries are pinned by this setup.
