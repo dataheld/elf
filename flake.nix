@@ -6,7 +6,7 @@
     nixpkgs.follows = "nullkomma/nixpkgs";
     maxheld = {
       url = "https://flakehub.com/f/dataheld/maxheld/*";
-      inputs.nullkomma.follows = "nullkomma";
+      inputs.nixpkgs.follows = "nixpkgs";
     };
   };
 
@@ -19,7 +19,7 @@
         pkgdown.brand.enable = true;
       };
       nullkomma.brand = inputs.maxheld;
-      nullkomma.cloudflare = {
+      nullkomma.cloudflareSite = {
         enable = true;
         domain = "maxheld.de";
         worker = "elf";

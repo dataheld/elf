@@ -1,3 +1,4 @@
+# nullkomma:r:start
 local({
   library <- getOption("nullkomma.r.library")
   if (nzchar(Sys.getenv("NULLKOMMA_R_NIX"))) {
@@ -30,3 +31,4 @@ local({
   )
   pak::pkg_install("pkgload", lib = library, ask = FALSE)
 })
+# nullkomma:r:end
